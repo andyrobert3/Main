@@ -12,7 +12,11 @@
 <li><a href="#user-stories">Appendix A: User Stories</a></li>
 <li><a href="#use-cases">Appendix B: Use Cases</a>
 <ul class="sectlevel2">
+<li><a href="#use-case-add-person">Use case: Add person</a></li>
 <li><a href="#use-case-delete-person">Use case: Delete person</a></li>
+<li><a href="#use-case-edit-person">Use case: Edit person</a></li>
+<li><a href="#use-case-find-person">Use case: Find person</a></li>
+<li><a href="#use-case-undo">Use case: Undo</a></li>
 </ul>
 </li>
 <li><a href="#non-functional-requirements">Appendix C: Non Functional Requirements</a></li>
@@ -69,7 +73,7 @@
 <p>Click <code>OK</code> to accept the default settings</p>
 </li>
 <li>
-<p>Run the <code>seedu.addressbook.Main</code> class (right-click the <code>Main</code> class and click <code>Run Main.main()</code>) and try executing a few commands</p>
+<p>Run the <code>F10-3.EX-SI-03.Main</code> class (right-click the <code>Main</code> class and click <code>Run Main.main()</code>) and try executing a few commands</p>
 </li>
 <li>
 <p>Run all the tests (right-click the <code>test</code> folder, and click <code>Run 'All Tests'</code>) and ensure that they pass</p>
@@ -97,7 +101,7 @@
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/mainClassDiagram.png" alt="mainClassDiagram">
+<img src="images/mainClassDiagram1.png" alt="mainClassDiagram1">
 </div>
 </div>
 </div>
@@ -120,6 +124,11 @@
 <div class="paragraph">
 <p>Priorities: High (must have) - <code>* * *</code>, Medium (nice to have) - <code>* *</code>, Low (unlikely to have) - <code>*</code></p>
 </div>
+<div class="paragraph">
+<p>PO- Police Officer
+AD- Ambulance Driver
+TD- Fire Truck Driver</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 22%;">
@@ -138,39 +147,45 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">new user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see usage instructions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">refer to instructions when I forget how to use the App</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request backup efficiently and quickly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">get help in dangerous situations like capturing an escaped criminal, saving a person’s life</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">add a new person</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know if accused is dangerous</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the steps I should take to handle the accused</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">delete a person</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">remove entries that I no longer need</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the severity of the accident</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prepare myself and my men</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">find a person by name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">locate details of persons without having to go through the entire list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the severity of the fire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prepare myself and my men</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">hide <a href="#private-contact-detail">private contact details</a> by default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minimize chance of someone else seeing them by accident</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">update HQ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let HQ know if I’m free or engaged</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know next actions to be taken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">respond effectively to any type of situation</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user with many persons in the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sort persons by name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">locate a person easily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know the serial number and battery level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to return it to HQ and charge it when necessary</p></td>
 </tr>
 </tbody>
 </table>
@@ -183,6 +198,84 @@
 <p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
 <div class="sect2">
+<h3 id="use-case-add-person"><a class="link" href="#use-case-add-person">Use case: Add person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to add person to the list</p>
+</li>
+<li>
+<p>System prompts User to enter his password</p>
+</li>
+<li>
+<p>User enters his password</p>
+</li>
+<li>
+<p>System adds person to the list and informs User that person has been successfully added.
+Use case ends.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3a. The given password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4a. Person already exists in the list</p>
+<div class="ulist">
+<ul>
+<li>
+<p>4a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4b. Person’s details are entered with invalid formats.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>4b1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes at step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*a. At any time, User cancels add action.</p>
+</li>
+<li>
+<p>*a1. System requests for confirmation to cancel</p>
+</li>
+<li>
+<p>*a2. User confirms cancellation</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
 <h3 id="use-case-delete-person"><a class="link" href="#use-case-delete-person">Use case: Delete person</a></h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -193,13 +286,19 @@
 <p>User requests to list persons</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>System shows a list of persons</p>
 </li>
 <li>
 <p>User requests to delete a specific person in the list</p>
 </li>
 <li>
-<p>AddressBook deletes the person.</p>
+<p>System prompts user to enter his password</p>
+</li>
+<li>
+<p>User enters password</p>
+</li>
+<li>
+<p>System deletes the person.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -222,9 +321,337 @@
 <div class="ulist">
 <ul>
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. System shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. The entered password is invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5a1. System shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*a. At any time, User chooses to cancel the delete action.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>*a1. System requests confirmation to cancel</p>
+</li>
+<li>
+<p>*a2. User confirms the cancellation.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-case-edit-person"><a class="link" href="#use-case-edit-person">Use case: Edit person</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to edit persons</p>
+</li>
+<li>
+<p>System prompts User to enter his password</p>
+</li>
+<li>
+<p>User enters his password</p>
+</li>
+<li>
+<p>System shows a list of persons</p>
+</li>
+<li>
+<p>User requests to update a specific person in the list</p>
+</li>
+<li>
+<p>System edits the person’s respective details.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The list is empty.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. System shows an error essage</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The entered password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. The person’s details are entered with invalid format.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>6a1. System shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 5.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*a. At any time, User chooses to cancel the delete action.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>*a1. System requests confirmation to cancel</p>
+</li>
+<li>
+<p>*a2. User confirms the cancellation.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-case-find-person"><a class="link" href="#use-case-find-person">Use case: Find person</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to find person</p>
+</li>
+<li>
+<p>System prompts User to enter his password</p>
+</li>
+<li>
+<p>User enters his password</p>
+</li>
+<li>
+<p>System prompts User to key in index of person</p>
+</li>
+<li>
+<p>User enters NRIC of person</p>
+</li>
+<li>
+<p>System displays details of person, if found on the list.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The list is empty.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. System shows an error essage</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The entered password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. The person’s details are entered with invalid format.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5a1. System shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 4.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. Person does not exist in the list</p>
+<div class="ulist">
+<ul>
+<li>
+<p>6a1. System informs User that person is not in the list</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*a. At any time, User chooses to cancel the delete action.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>*a1. System requests confirmation to cancel</p>
+</li>
+<li>
+<p>*a2. User confirms the cancellation.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-case-undo"><a class="link" href="#use-case-undo">Use case: Undo</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters command to undo</p>
+</li>
+<li>
+<p>System prompts User to enter his password</p>
+</li>
+<li>
+<p>User enters his password</p>
+</li>
+<li>
+<p>System reverts the list to before the final change made</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The list is empty.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. System shows an error essage</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The entered password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. The person’s details are entered with invalid format.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5a1. System shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 4.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. Person does not exist in the list</p>
+<div class="ulist">
+<ul>
+<li>
+<p>6a1. System informs User that person is not in the list</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*a. At any time, User chooses to cancel the delete action.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>*a1. System requests confirmation to cancel</p>
+</li>
+<li>
+<p>*a2. User confirms the cancellation.</p>
+<div class="paragraph">
+<p>Use case ends</p>
 </div>
 </li>
 </ul>
@@ -252,6 +679,41 @@
 <li>
 <p>Should favor DOS style commands over Unix-style commands.</p>
 </li>
+<li>
+<p>Business/domain rules:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Device should accept any more input after 9 characters when PO is inputting NRIC</p>
+</li>
+<li>
+<p>Device will constantly remind PO to charge if battery level goes below a certain level.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Accessibility: Different levels of access for POs and HQPs and drivers (ambulance,fire truck).</p>
+</li>
+<li>
+<p>Performance requirements: The system should respond within two seconds.</p>
+</li>
+<li>
+<p>Security requirements: The system should be password locked.</p>
+</li>
+<li>
+<p>Data requirements:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Data should be constant, not volatile.</p>
+</li>
+<li>
+<p>Data should be recoverable from last save point</p>
+</li>
+</ol>
+</div>
+</li>
 </ol>
 </div>
 </div>
@@ -272,4 +734,4 @@
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-26 06:06:37 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-26 06:22:10 UTC</div></div></div></body></html>
