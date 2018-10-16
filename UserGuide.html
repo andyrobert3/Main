@@ -55,12 +55,12 @@ Format: help</p>
 <div class="paragraph">
 <p>3.2. Adding a new person: add
 Adds a criminal to the database- only by Admin.
-Format: add i/NRIC n/NAME p/PHONE_NUMBER d/DATE_OF_BIRTH s/STATUS a/ADDRESS
+Format: add NAME n/NRIC d/DATEOFBIRTH p/POSTALCODE s/STATUS w/WANTEDFOR [o/PASTOFFENSES]
 Examples:
-●	add i/G1978411Q n/John Doe p/98765432 d/03-April-1972 s/Wanted a/John street, block 123, #01-01
+●	add John Doe n/s1234567a d/1996 p/510246 s/xc w/none o/theft o/drugs"
 3.3. Editing a person : edit
 Edits an existing person in the address book.
-Format: edit NRIC [n/NAME] [p/PHONE] [d/DATE_OF_BIRTH] [s/STATUS] [a/ADDRESS]
+Format: edit n/[NAME] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES
 ●	Edits the person with the specified NRIC.
 ●	At least one of the optional fields must be provided.
 ●	Existing values will be updated to the input values.
@@ -195,17 +195,17 @@ Format - help</p>
 </div>
 <div class="paragraph">
 <p>●	Add
-Format - add i/[NRIC] n/[NAME] p/[PHONE_NUMBER] d/[DATE_OF_BIRTH] s/[STATUS] a/[ADDRESS]</p>
+Format - add n/[NAME] n/[NRIC] d/[DATE_OF_BIRTH] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
 </div>
 <div class="paragraph">
-<p>E.g. add i/G1978411Q n/John Doe p/98765432 d/03-April-1972 s/Wanted a/John street, block 123, #01-01</p>
+<p>E.g. add John Doe n/s1234567a d/1996 p/510246 s/xc w/none o/theft o/drugs"</p>
 </div>
 <div class="paragraph">
 <p>●	Edit
-Format- edit NRIC [n/NAME] [p/PHONE] [d/DATE_OF_BIRTH] [s/STATUS] [a/ADDRESS]</p>
+Format- edit n/[NAME] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
 </div>
 <div class="paragraph">
-<p>E.g. edit G1952866Q p/91234567</p>
+<p>E.g. edit G1952866Q p/510246</p>
 </div>
 <div class="paragraph">
 <p>●	Delete
@@ -310,4 +310,4 @@ Dispatches resources (PO)</p>
 </div>
 <div class="paragraph">
 <p>E.g. dispatch PO1</p>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-16 05:28:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-16 10:09:53 UTC</div></div></div></body></html>
