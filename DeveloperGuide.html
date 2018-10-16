@@ -17,6 +17,8 @@
 <li><a href="#use-case-edit-person">Use case: Edit person</a></li>
 <li><a href="#use-case-find-person">Use case: Find person</a></li>
 <li><a href="#use-case-undo">Use case: Undo</a></li>
+<li><a href="#use-case-request-backup">Use Case: Request Backup</a></li>
+<li><a href="#use-case-dispatch-backup">Use Case: Dispatch Backup</a></li>
 </ul>
 </li>
 <li><a href="#non-functional-requirements">Appendix C: Non Functional Requirements</a></li>
@@ -594,7 +596,7 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a1. System shows an error essage</p>
+<p>1a1. System shows an error message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -652,6 +654,205 @@ Use case ends.</p>
 <p>*a2. User confirms the cancellation.</p>
 <div class="paragraph">
 <p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-case-request-backup"><a class="link" href="#use-case-request-backup">Use Case: Request Backup</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>System prompts User to enter his password.</p>
+</li>
+<li>
+<p>User enters his password.</p>
+</li>
+<li>
+<p>System prompts User to key in command.</p>
+</li>
+<li>
+<p>User types in to request backup with pre-defined case types and message.</p>
+</li>
+<li>
+<p>System adds message into Headquarters inbox.</p>
+</li>
+<li>
+<p>User will be notified with success message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. User keys in invalid command format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. System shows error message</p>
+</li>
+<li>
+<p>1a2. System prompts correct format for request feature</p>
+<div class="paragraph">
+<p>Use case resumes from step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The entered password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. The case type entered is invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>6a1. System shows an error message.</p>
+</li>
+<li>
+<p>6a2. System will prompt current valid case types.</p>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-case-dispatch-backup"><a class="link" href="#use-case-dispatch-backup">Use Case: Dispatch Backup</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>System prompts User to enter his password.</p>
+</li>
+<li>
+<p>User enters his password.</p>
+</li>
+<li>
+<p>System prompts User to key in command.</p>
+</li>
+<li>
+<p>User lists the current unread messages inside the inbox.</p>
+</li>
+<li>
+<p>System shows unread inbox messages.</p>
+</li>
+<li>
+<p>Inbox messages become read.</p>
+</li>
+<li>
+<p>User types to dispatch backup with index of police officer<br>
+which requested backup &amp; police officer to dispatch</p>
+</li>
+<li>
+<p>System adds new message with ETA in police officer which requested backup</p>
+</li>
+<li>
+<p>System adds new message with destination coordinates to dispatch idle police officer</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. User keys in invalid command format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. System shows error message</p>
+</li>
+<li>
+<p>1a2. System prompts correct format for dispatch feature</p>
+<div class="paragraph">
+<p>Use case resumes from step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The entered password is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4a. User is not a Headquarter Personnel</p>
+<div class="ulist">
+<ul>
+<li>
+<p>4a1. System shows an error message stating invalid credentials</p>
+<div class="paragraph">
+<p>Use case resumes in step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. Index entered for to dispatch police officer is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes in step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. Index entered for requested backup police officer is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>6a1. System shows an error message</p>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
 </div>
 </li>
 </ul>
@@ -734,4 +935,4 @@ Use case ends.</p>
 </dl>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-11 07:58:22 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-16 04:38:08 UTC</div></div></div></body></html>
