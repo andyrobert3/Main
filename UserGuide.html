@@ -57,18 +57,50 @@ Format: help</p>
 Adds a criminal to the database- only by Admin.
 Format: add NAME n/NRIC d/DATEOFBIRTH p/POSTALCODE s/STATUS w/WANTEDFOR [o/PASTOFFENSES]
 Examples:
-●	add John Doe n/s1234567a d/1996 p/510246 s/xc w/none o/theft o/drugs"
-3.3. Editing a person : edit
-Edits an existing person in the address book.
+●	add John Doe n/s1234567a d/1996 p/510246 s/xc w/none o/theft o/drugs"</p>
+</div>
+<div class="paragraph">
+<p>3.3. Editing a person : edit
+Edit a specified parameter of an existing person in the address book.
 Format: edit n/[NAME] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES
 ●	Edits the person with the specified NRIC.
 ●	At least one of the optional fields must be provided.
 ●	Existing values will be updated to the input values.
 Examples:
-●	edit G1952866Q p/91234567
-●	Edits the phone number of the person with the specified NRIC to be 91234567
-3.4. Deleting a person : delete
-Deletes the specified person from the database- only by Admin.
+●	edit g1952866Q p/510246
+●	Edits the postal code of the person with the specified NRIC to be 510246</p>
+</div>
+<div class="paragraph">
+<p>3.4 Display a list of all persons : list
+Shows a list of every person in the records
+Format: list
+●	Displays list of persons
+Example:
+●	list
+●	displays list of all persons</p>
+</div>
+<div class="paragraph">
+<p>3.5 Find a person: find
+Finds a person in the records by NRIC
+Format: find NRIC
+●	Shows the person with the specified NRIC
+Example:
+●	find s1234567a
+●	Shows person with s1234567a</p>
+</div>
+<div class="paragraph">
+<p>3.6 Get screening history of a person: check
+Displays all the times a person was screened in the form of timestamps
+Format: check s1234567a
+●	Returns an indexed list of timestamps for specified person
+●	Only HQP can use check command
+Example:
+●	check s1234567a
+●	Shows an indexed list of timestamps for when person with s1234567a was screened by a PO</p>
+</div>
+<div class="paragraph">
+<p>3.7. Deleting a person : delete
+Deletes the specified person from the database- only by HQP.
 Format: delete NRIC
 ●	Deletes the person with the specifies NRIC.
 ●	Deleting can be only done by an Administrator.
@@ -77,110 +109,107 @@ Examples:
 ●	Deletes the person with the specified NRIC from the database.</p>
 </div>
 <div class="paragraph">
-<p>3.5. Requesting for assistance : RA (ambulance) or RB (Backup)
+<p>3.8. Clear records : clear
+Clears the records of persons- only by HQP
+Format: clear
+●	Clears records
+Example:
+●	clear
+●	Records will now be empty</p>
+</div>
+<div class="paragraph">
+<p>3.9. Requesting for assistance : RA (ambulance) or RB (Backup)
 Format: RA (to call for ambulance) or RB (to call for backup)</p>
 </div>
 <div class="paragraph">
 <p>●	Generates GPS coordinates of current location and sends it to HQ.
-●	Depending on type of assistance requested, either an ambulance or another patrol resource will be dispatched to said location</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>	3.6. Undo command: undo
-	It erases the last change done to the document reverting it to an older state.
-Only works if previous command exists, commands that can be undo are add and delete.</pre>
-</div>
+●	Depending on type of assistance requested, either an ambulance or another patrol resource will be dispatched to said location
+Example:
+●	RB</p>
 </div>
 <div class="paragraph">
-<p>Format: undo</p>
+<p>3.10. Dispatch a PO : dispatch
+Dispatches a specified PO
+Format: dispatch PO[ID]
+●	Dispatches PO[ID]
+Example:
+●	dispatch PO2
+●	PO2 will receive a dispatch message</p>
 </div>
 <div class="paragraph">
-<p>Examples:
-●	add i/G1978411Q n/John Doe p/98765432 d/03-April-1972 s/Wanted a/John street, block 123, #01-01
-●	undo
-		Deletes John Doe from the database</p>
+<p>3.11. Battery check : battery check
+Checks battery level currently
+Format: battery check
+●	Shows battery level
+Example:
+●	battery check
+●	50%</p>
 </div>
 <div class="paragraph">
-<p>●	undo
-●	Output: ‘It looks like you haven’t entered any previous command, please enter one.’</p>
+<p>3.12. Serial Number Check : *<mark>06</mark>
+Checks the serial number of device against the database
+Format: *<mark>06</mark> [PHONE_NUMBER]
+●	If inside the database, this means the phone is stolen
+Example:
+●	*<mark>06</mark> 99999999
+●	Returns true if number exists in the system</p>
 </div>
 <div class="paragraph">
-<p>●	help
-●	Output: ‘Your previous command cannot be undone’</p>
+<p>3.13. Vehicle Number Check : VCheck
+Checks if vehicle is stolen
+Format: VCheck [VEHICLE_NUMBER]
+●	Returns true if [VEHICLE_NUMBER] is stolen
+Example:
+●	VCheck SDV1111H
+●	Returns true if SDV1111H is stolen</p>
 </div>
 <div class="paragraph">
-<p>3.7. Repeat command: redo
-	Repeats the previous command, commands include help, battery check, serial number check, battery check, date time, inbox, list.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Format: redo</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>	Examples:
-●	RA
-●	redo
-		Requests another ambulance</pre>
-</div>
+<p>3.14. Date and Time Check : date time
+Displays current date and time
+Format: date time
+●	Shows time
+Example:
+●	date time
+●	15/10/18 19:30:27</p>
 </div>
 <div class="paragraph">
-<p>●	redo
-●	Output: ‘It looks like you haven’t entered any previous command, please enter one.’</p>
+<p>3.15. Lock System : lock
+Locks the system and unlocks with password input
+Format: lock
+●	Locks system and user is prompted to input password
+Example:
+●	lock
+●	Enter password to unlock</p>
 </div>
 <div class="paragraph">
-<p>●	add i/G1978411Q n/John Doe p/98765432 d/03-April-1972 s/Wanted a/John street, block 123, #01-01
-●	Output: ‘Your previous command cannot be repeated. Please access the help page for a list of repeatable command’</p>
+<p>3.16. Update Password : update password
+Updates password of user- only HQP can change the user&#8217;s password
+Format: update password
+●	System prompts user to input new password
+Example:
+●	update password
+●	Please select a password to change</p>
 </div>
 <div class="paragraph">
-<p>3.8. Check notifications: inbox
+<p>3.17. Check notifications: inbox
 	For HQPs: Check inbox to see a list of dispatch requests made by POs, and are sorted based on severity first, and then time stamp.
-	For POs: Check inbox to see who is responding to request for backup/ambulance/fire truck or to see if have any dispatch orders</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Format: inbox</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>	Examples (as a HQP):
+	For POs: Check inbox to see who is responding to request for backup/ambulance/fire truck or to see if have any dispatch orders
+	Format: inbox
+●	Shows list of unread messages for current user
+Examples (as a HQP):
 ●	inbox
-●	Output: Shows a list of dispatch requests (sorted by severity then timestamp) made by POs on the ground:
-○	PO1: Gunman, (location in form of GPS coordinates) , 1030 hrs
-○	PO3: Gunman, (location in form of GPS coordinates), 1033 hrs
-○	PO4: Ambulance, car accident, (location in form of GPS coordinates) , 1028 hrs
-○	PO5: Firetruck, small fire, (location in form of GPS coordinates) , 1048 hrs
-Examples (as a PO requesting for assistance):
+●	Shows a list of dispatch requests (sorted by severity then timestamp) made by POs on the ground:
+Examples:
 ●	inbox
-●	Output - for less serious cases - shows who is responding :
-○	 PO3 is dispatched and on the way
-●	Output (for severe cases):
-○	SWAT team is dispatched and on the way
-	Examples (as a PO that is dispatched by HQ):
-●	inbox
-●	Output:
-○	Dispatch message: Case of dispute, [location in form of GPS coordinates]</pre>
-</div>
+●	Shows any dispatch messages by HQ or response for backup if any</p>
 </div>
 <div class="paragraph">
-<p>3.9. Dispatch resource: dispatch (HQ Only)
-	HQ is able to dispatch officers to assign them to tasks. Only free officers are able to be dispatched. A warning would presented to HQ when they try to assign an occupied officer.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Format: dispatch [insert patrol number]</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>	Example:
-●	dispatch PO2</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Output: Dispatch message sent to PO2</p>
+<p>3.18. Exit program : exit
+Shuts down program
+Format: exit
+●	Program shuts down
+Example:
+●	Program shuts down</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -191,45 +220,83 @@ Examples (as a PO requesting for assistance):
 </div>
 <div class="paragraph">
 <p>●	Help
-Format - help</p>
+Displays a list of commands available to the specific user</p>
+</div>
+<div class="paragraph">
+<p>Format : help</p>
+</div>
+<div class="paragraph">
+<p>E.g. help</p>
 </div>
 <div class="paragraph">
 <p>●	Add
-Format - add n/[NAME] n/[NRIC] d/[DATE_OF_BIRTH] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
+Adds a person to the records</p>
+</div>
+<div class="paragraph">
+<p>Format: add n/[NAME] n/[NRIC] d/[DATE_OF_BIRTH] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
 </div>
 <div class="paragraph">
 <p>E.g. add John Doe n/s1234567a d/1996 p/510246 s/xc w/none o/theft o/drugs"</p>
 </div>
 <div class="paragraph">
 <p>●	Edit
-Format- edit n/[NAME] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
+Edits the specified parameter of a person</p>
 </div>
 <div class="paragraph">
-<p>E.g. edit G1952866Q p/510246</p>
+<p>Format: edit n/[NAME] p/[POSTAL_CODE] s/[STATUS] w/WANTED_FOR o/PAST_OFFENCES</p>
+</div>
+<div class="paragraph">
+<p>E.g. edit g1952866q p/510246</p>
+</div>
+<div class="paragraph">
+<p>●	List
+Lists out all the persons in the records</p>
+</div>
+<div class="paragraph">
+<p>Format: list</p>
+</div>
+<div class="paragraph">
+<p>E.g. list</p>
+</div>
+<div class="paragraph">
+<p>●	Find
+Finds a person in the records</p>
+</div>
+<div class="paragraph">
+<p>Format: find [NRIC]</p>
+</div>
+<div class="paragraph">
+<p>E.g. find s1234567a</p>
+</div>
+<div class="paragraph">
+<p>●	Check
+Checks for the screening history of a person</p>
+</div>
+<div class="paragraph">
+<p>Format: check [NRIC]</p>
+</div>
+<div class="paragraph">
+<p>E.g. check s1234567a</p>
 </div>
 <div class="paragraph">
 <p>●	Delete
-Format- delete NRIC</p>
+Deletes a person by NRIC in the records</p>
 </div>
 <div class="paragraph">
-<p>E.g. delete G1952866Q</p>
+<p>Format: delete NRIC</p>
 </div>
 <div class="paragraph">
-<p>●	Repeat
-Performs previous run command</p>
+<p>E.g. delete g1952866q</p>
 </div>
 <div class="paragraph">
-<p>Format - redo</p>
+<p>●	Clear
+Clears the records of persons</p>
 </div>
 <div class="paragraph">
-<p>E.g. redo</p>
+<p>Format: clear</p>
 </div>
 <div class="paragraph">
-<p>●	Undo
-Format - undo</p>
-</div>
-<div class="paragraph">
-<p>E.g. undo</p>
+<p>E.g. clear</p>
 </div>
 <div class="paragraph">
 <p>●	RA (Ambulance) or RF(Fire Brigade) or RB (Backup)
@@ -240,6 +307,16 @@ RA Calls for ambulance, RF calls for Fire Brigade while RB calls for backup to c
 </div>
 <div class="paragraph">
 <p>E.g: RB</p>
+</div>
+<div class="paragraph">
+<p>●	Dispatch
+Dispatches a PO</p>
+</div>
+<div class="paragraph">
+<p>Format: dispatch PO[ID]</p>
+</div>
+<div class="paragraph">
+<p>E.g. dispatch PO2</p>
 </div>
 <div class="paragraph">
 <p>●	Battery Check
@@ -292,8 +369,18 @@ Locks the system and unlocks only with password</p>
 <p>E.g. lock</p>
 </div>
 <div class="paragraph">
+<p>●	Update Password
+Changes the password of the current user</p>
+</div>
+<div class="paragraph">
+<p>Format: update password</p>
+</div>
+<div class="paragraph">
+<p>E.g. update password</p>
+</div>
+<div class="paragraph">
 <p>●	Check notifications: inbox
-Checks for list of dispatch requests (for HQP), status of request (for requesting POs) or dispatch messages (for free POs or POs not engaged with anything)</p>
+Stores and displays unread messages for each PO</p>
 </div>
 <div class="paragraph">
 <p>Format: inbox</p>
@@ -310,4 +397,14 @@ Dispatches resources (PO)</p>
 </div>
 <div class="paragraph">
 <p>E.g. dispatch PO1</p>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-17 06:15:47 UTC</div></div></div></body></html>
+</div>
+<div class="paragraph">
+<p>●	Exit
+Exits the program</p>
+</div>
+<div class="paragraph">
+<p>Format: exit</p>
+</div>
+<div class="paragraph">
+<p>E.g. exit</p>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-17 16:49:51 UTC</div></div></div></body></html>
