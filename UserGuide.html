@@ -14,22 +14,22 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.3. Editing a person : <code>edit</code></a></li>
-<li><a href="#display-a-list-of-all-persons-code-list-code">3.4. Display a list of all persons : <code>list</code></a></li>
-<li><a href="#find-a-person-by-nric-code-find-code">3.5. Find a person by NRIC : <code>find</code></a></li>
-<li><a href="#get-screening-history-of-a-person-code-check-code">3.6. Get screening history of a person: <code>check</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></li>
-<li><a href="#clear-records-code-clear-code">3.8. Clear records : <code>clear</code></a></li>
-<li><a href="#requesting-for-assistance-code-ra-code-ambulance-or-code-rf-code-fire-brigade-or-code-rb-code-backup">3.9. Requesting for assistance : <code>RA</code> (ambulance) or <code>RF</code> (Fire Brigade) or <code>RB</code> (Backup)</a></li>
-<li><a href="#dispatch-a-po-code-dispatch-code">3.10. Dispatch a PO : <code>dispatch</code></a></li>
-<li><a href="#battery-check-code-battery-check-code">3.11. Battery check : <code>battery check</code></a></li>
-<li><a href="#serial-number-check-code-06-code">3.12. Serial Number Check : <code>*06</code></a></li>
-<li><a href="#vehicle-number-check-code-vcheck-code">3.13. Vehicle Number Check : <code>vcheck</code></a></li>
-<li><a href="#date-and-time-check-code-datetime-code">3.14. Date and Time Check : <code>datetime</code></a></li>
-<li><a href="#lock-system-code-lock-code">3.15. Lock System : <code>lock</code></a></li>
-<li><a href="#update-password-code-update-password-code">3.16. Update Password : <code>update password</code></a></li>
-<li><a href="#check-notifications-code-inbox-code">3.17. Check notifications: <code>inbox</code></a></li>
+<li><a href="#display-date-and-time-code-time-code">3.2. Display date and time : <code>time</code></a></li>
+<li><a href="#adding-a-person-code-add-code">3.3. Adding a person: <code>add</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
+<li><a href="#display-a-list-of-all-persons-code-list-code">3.5. Display a list of all persons : <code>list</code></a></li>
+<li><a href="#find-a-person-by-nric-code-find-code">3.6. Find a person by NRIC : <code>find</code></a></li>
+<li><a href="#get-screening-history-of-a-person-code-check-code">3.7. Get screening history of a person: <code>check</code></a></li>
+<li><a href="#get-status-of-pos-code-checkstatus-code">3.8. Get status of POs: <code>checkstatus</code></a></li>
+<li><a href="#update-status-of-po-code-updatestatus-code">3.9. Update status of PO: <code>updatestatus</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">3.10. Deleting a person : <code>delete</code></a></li>
+<li><a href="#clear-records-code-clear-code">3.11. Clear records : <code>clear</code></a></li>
+<li><a href="#requesting-for-assistance-code-request-code">3.12. Requesting for assistance : <code>request</code></a></li>
+<li><a href="#dispatch-a-po-code-dispatch-code">3.13. Dispatch a PO : <code>dispatch</code></a></li>
+<li><a href="#lock-system-code-lock-code">3.14. Lock System : <code>lock</code></a></li>
+<li><a href="#update-password-code-update-password-code">3.15. Update Password : <code>update password</code></a></li>
+<li><a href="#check-notifications-code-showunread-code">3.16. Check notifications: <code>showunread</code></a></li>
+<li><a href="#read-message-code-read-code">3.17. Read message : <code>read</code></a></li>
 <li><a href="#exit-program-code-shutdown-code">3.18. Exit program : <code>shutdown</code></a></li>
 </ul>
 </li>
@@ -109,14 +109,10 @@
 <div class="sect2">
 <h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
 <div class="paragraph">
-<p>Format: 'help'</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
 <p>Lists all the features in a user friendly format for users and how to use them</p>
-</li>
-</ul>
+</div>
+<div class="paragraph">
+<p>Format: 'help'</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -125,7 +121,16 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="display-date-and-time-code-time-code"><a class="link" href="#display-date-and-time-code-time-code">3.2. Display date and time : <code>time</code></a></h3>
+<div class="paragraph">
+<p>Shows the current date and time</p>
+</div>
+<div class="paragraph">
+<p>Format: 'time'</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.3. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
 <p>Adds a criminal to the database - only by HQP.</p>
 </div>
@@ -185,7 +190,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.3. Editing a person : <code>edit</code></a></h3>
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Edit a specified parameter of an existing person in the address book - only by HQP</p>
 </div>
@@ -224,7 +229,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-a-list-of-all-persons-code-list-code"><a class="link" href="#display-a-list-of-all-persons-code-list-code">3.4. Display a list of all persons : <code>list</code></a></h3>
+<h3 id="display-a-list-of-all-persons-code-list-code"><a class="link" href="#display-a-list-of-all-persons-code-list-code">3.5. Display a list of all persons : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of every person in the records</p>
 </div>
@@ -251,7 +256,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="find-a-person-by-nric-code-find-code"><a class="link" href="#find-a-person-by-nric-code-find-code">3.5. Find a person by NRIC : <code>find</code></a></h3>
+<h3 id="find-a-person-by-nric-code-find-code"><a class="link" href="#find-a-person-by-nric-code-find-code">3.6. Find a person by NRIC : <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds a person in the records by the specified NRIC</p>
 </div>
@@ -291,7 +296,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="get-screening-history-of-a-person-code-check-code"><a class="link" href="#get-screening-history-of-a-person-code-check-code">3.6. Get screening history of a person: <code>check</code></a></h3>
+<h3 id="get-screening-history-of-a-person-code-check-code"><a class="link" href="#get-screening-history-of-a-person-code-check-code">3.7. Get screening history of a person: <code>check</code></a></h3>
 <div class="paragraph">
 <p>Displays all the times a person was screened in the form of timestamps (using 'find' command) - Only by HQP</p>
 </div>
@@ -325,7 +330,38 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></h3>
+<h3 id="get-status-of-pos-code-checkstatus-code"><a class="link" href="#get-status-of-pos-code-checkstatus-code">3.8. Get status of POs: <code>checkstatus</code></a></h3>
+<div class="paragraph">
+<p>Shows all POs and their current engagement statuses</p>
+</div>
+<div class="paragraph">
+<p>Format: 'checkstatus'</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="update-status-of-po-code-updatestatus-code"><a class="link" href="#update-status-of-po-code-updatestatus-code">3.9. Update status of PO: <code>updatestatus</code></a></h3>
+<div class="paragraph">
+<p>Updates the PO so that it is not engaged anymore</p>
+</div>
+<div class="paragraph">
+<p>Format: 'updatestatus PO(ID)'</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>updatestatus po2</p>
+</li>
+<li>
+<p>po2 is now free for dispatch</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.10. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified person from the database- only by HQP.</p>
 </div>
@@ -354,7 +390,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="clear-records-code-clear-code"><a class="link" href="#clear-records-code-clear-code">3.8. Clear records : <code>clear</code></a></h3>
+<h3 id="clear-records-code-clear-code"><a class="link" href="#clear-records-code-clear-code">3.11. Clear records : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears the records of persons- only by HQP</p>
 </div>
@@ -376,12 +412,12 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="requesting-for-assistance-code-ra-code-ambulance-or-code-rf-code-fire-brigade-or-code-rb-code-backup"><a class="link" href="#requesting-for-assistance-code-ra-code-ambulance-or-code-rf-code-fire-brigade-or-code-rb-code-backup">3.9. Requesting for assistance : <code>RA</code> (ambulance) or <code>RF</code> (Fire Brigade) or <code>RB</code> (Backup)</a></h3>
+<h3 id="requesting-for-assistance-code-request-code"><a class="link" href="#requesting-for-assistance-code-request-code">3.12. Requesting for assistance : <code>request</code></a></h3>
 <div class="paragraph">
 <p>Generates GPS coordinates of current location and sends it to HQ. Depending on type of assistance requested, either an ambulance or another patrol resource will be dispatched to said location</p>
 </div>
 <div class="paragraph">
-<p>Format: 'RA' (to call for ambulance) or 'RB' (to call for backup)</p>
+<p>Format: 'request'</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -389,7 +425,7 @@ A person can have more than 0 past offenses
 <div class="ulist">
 <ul>
 <li>
-<p>RB</p>
+<p>request</p>
 </li>
 <li>
 <p>Returns a set of GPS coordinates to HQ</p>
@@ -398,7 +434,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="dispatch-a-po-code-dispatch-code"><a class="link" href="#dispatch-a-po-code-dispatch-code">3.10. Dispatch a PO : <code>dispatch</code></a></h3>
+<h3 id="dispatch-a-po-code-dispatch-code"><a class="link" href="#dispatch-a-po-code-dispatch-code">3.13. Dispatch a PO : <code>dispatch</code></a></h3>
 <div class="paragraph">
 <p>Dispatches a specified PO</p>
 </div>
@@ -420,79 +456,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="battery-check-code-battery-check-code"><a class="link" href="#battery-check-code-battery-check-code">3.11. Battery check : <code>battery check</code></a></h3>
-<div class="paragraph">
-<p>Checks battery level currently</p>
-</div>
-<div class="paragraph">
-<p>Format: 'battery check'</p>
-</div>
-<div class="paragraph">
-<p>Examples:
-*	battery check
-*	returns the battery level, for e.g : 50%</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="serial-number-check-code-06-code"><a class="link" href="#serial-number-check-code-06-code">3.12. Serial Number Check : <code>*06</code></a></h3>
-<div class="paragraph">
-<p>Checks the serial number of device against the database. If inside the database, this means the phone is stolen</p>
-</div>
-<div class="paragraph">
-<p>Format: '*06 PHONE_NUMBER'</p>
-</div>
-<div class="paragraph">
-<p>Examples:
-*	*06 99999999
-*	Returns true if number exists in the system</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="vehicle-number-check-code-vcheck-code"><a class="link" href="#vehicle-number-check-code-vcheck-code">3.13. Vehicle Number Check : <code>vcheck</code></a></h3>
-<div class="paragraph">
-<p>Checks if vehicle is stolen</p>
-</div>
-<div class="paragraph">
-<p>Format: 'vcheck VEHICLE_NUMBER'</p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vcheck SDV1111H</p>
-</li>
-<li>
-<p>Returns true if SDV1111H is stolen</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="date-and-time-check-code-datetime-code"><a class="link" href="#date-and-time-check-code-datetime-code">3.14. Date and Time Check : <code>datetime</code></a></h3>
-<div class="paragraph">
-<p>Displays current date and time</p>
-</div>
-<div class="paragraph">
-<p>Format: 'datetime'</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>'datetime'</p>
-</li>
-<li>
-<p>15/10/18 1930hrs</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="lock-system-code-lock-code"><a class="link" href="#lock-system-code-lock-code">3.15. Lock System : <code>lock</code></a></h3>
+<h3 id="lock-system-code-lock-code"><a class="link" href="#lock-system-code-lock-code">3.14. Lock System : <code>lock</code></a></h3>
 <div class="paragraph">
 <p>Locks the system and unlocks with password input</p>
 </div>
@@ -514,7 +478,7 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="update-password-code-update-password-code"><a class="link" href="#update-password-code-update-password-code">3.16. Update Password : <code>update password</code></a></h3>
+<h3 id="update-password-code-update-password-code"><a class="link" href="#update-password-code-update-password-code">3.15. Update Password : <code>update password</code></a></h3>
 <div class="paragraph">
 <p>Updates password of user - only HQP can change the user&#8217;s password</p>
 </div>
@@ -539,13 +503,13 @@ A person can have more than 0 past offenses
 </div>
 </div>
 <div class="sect2">
-<h3 id="check-notifications-code-inbox-code"><a class="link" href="#check-notifications-code-inbox-code">3.17. Check notifications: <code>inbox</code></a></h3>
+<h3 id="check-notifications-code-showunread-code"><a class="link" href="#check-notifications-code-showunread-code">3.16. Check notifications: <code>showunread</code></a></h3>
 <div class="paragraph">
 <p>For HQPs: Check inbox to see a list of dispatch requests made by POs, and are sorted based on severity first, and then time stamp.
 For POs: Check inbox to see who is responding to request for backup/ambulance/fire truck or to see if have any dispatch orders</p>
 </div>
 <div class="paragraph">
-<p>Format: 'inbox'</p>
+<p>Format: 'showunread'</p>
 </div>
 <div class="paragraph">
 <p>Examples (as a HQP):</p>
@@ -553,7 +517,7 @@ For POs: Check inbox to see who is responding to request for backup/ambulance/fi
 <div class="ulist">
 <ul>
 <li>
-<p>'inbox'</p>
+<p>'showunread'</p>
 </li>
 <li>
 <p>Shows a list of dispatch requests (sorted by severity then timestamp) made by POs on the ground:</p>
@@ -562,8 +526,21 @@ For POs: Check inbox to see who is responding to request for backup/ambulance/fi
 </div>
 <div class="paragraph">
 <p>Examples (as a PO):
-*	'inbox'
+*	'showunread'
 *	Shows any dispatch messages by HQ or response for backup if any</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="read-message-code-read-code"><a class="link" href="#read-message-code-read-code">3.17. Read message : <code>read</code></a></h3>
+<div class="paragraph">
+<p>Updates the status of unread messages to read. Command to be used after <code>showunread</code> command</p>
+</div>
+<div class="paragraph">
+<p>Format: 'read index'</p>
+</div>
+<div class="paragraph">
+<p>Examples:
+*  read 1</p>
 </div>
 </div>
 <div class="sect2">
@@ -589,6 +566,9 @@ For POs: Check inbox to see who is responding to request for backup/ambulance/fi
 <ul>
 <li>
 <p><strong>Help</strong> : 'help'</p>
+</li>
+<li>
+<p><strong>Show time</strong> : 'time'</p>
 </li>
 <li>
 <p><strong>Add</strong>  : 'add n/NAME n/NRIC d/DATE_OF_BIRTH p/POSTAL_CODE s/STATUS w/WANTED_FOR o/PAST OFFENCES&#8230;&#8203;'</p>
@@ -635,6 +615,19 @@ E.g. add Bob n/g1234567a d/1996 p/111111 s/clear w/none</p>
 <div class="ulist">
 <ul>
 <li>
+<p><strong>Get status of POs</strong> : 'checkstatus'</p>
+</li>
+<li>
+<p><strong>Update status of PO</strong> : 'updatestatus'</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>E.g  updatestatus po2</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p><strong>Delete</strong> : 'delete NRIC'</p>
 </li>
 </ul>
@@ -661,47 +654,28 @@ E.g. add Bob n/g1234567a d/1996 p/111111 s/clear w/none</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Battery Check</strong> : 'battery check'</p>
-</li>
-<li>
-<p><strong>Serial Number Check</strong> : '*06 PHONE_NUMBER'</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>E.g. *06 86781234</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Vehicle Number Check</strong> : 'vcheck'</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Format: vcheck VEHICLE_NUMBER</p>
-</div>
-<div class="paragraph">
-<p>E.g. vcheck v/SGP0884S</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Date and Time Check</strong> : 'datetime'</p>
-</li>
-<li>
 <p><strong>Lock</strong> : 'lock'</p>
 </li>
 <li>
 <p><strong>Update Password</strong> : 'update password'</p>
 </li>
 <li>
-<p><strong>Check notifications</strong> : 'inbox'</p>
+<p><strong>Check notifications</strong> : 'showunread'</p>
 </li>
+<li>
+<p><strong>Read message</strong> : 'read index'</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>E.g  read 1</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Exit</strong> : 'shutdown'</p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 05:33:05 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-26 13:06:59 UTC</div></div></div></body></html>
