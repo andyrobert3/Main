@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Matthew Alexander - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">main</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2113-AY1819S1-F10-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Matthew Alexander - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-police-records-system"><a class="link" href="#project-police-records-system">PROJECT: Police Records System</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Addressbook is morphed to a police records database with two types of users, Police Officers (PO) &amp; Headquarter Personnel (HQP).
+Users have their own access levels with HQP having higher authorization compared to PO.
+Police officers can screen civilians during duty with their respective NRIC, their criminal history and status would be shown to the police officers.
+POs can also request for backup when needed, HQP would dispatch other POs at their discretion based on estimated time of arrival.
+Refer to Quick Start guide to get started.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary"><a class="link" href="#summary">Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Role</strong>: Developer</p>
+</li>
+<li>
+<p><strong>Responsibility</strong>: Integration</p>
+</li>
+<li>
+<p><strong>Major enhancements</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Edit Command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows HQP to update a civilian’s postal code, offense list, wanted status.</p>
+</li>
+<li>
+<p>Justification: : Individual data in Police Records System would need to be updated as people change addresses, commit crimes, serve their sentence.</p>
+</li>
+<li>
+<p>Highlights: Due to each NRIC being assigned to a specific individual for their whole lives, they cannot be changed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Request Command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows PO to request backup to HQP’s inbox. HQP would then be able to view request messages with the PO’s id, case, urgency and his/her location.</p>
+</li>
+<li>
+<p>Justification: POs may not be able to handle a case alone especially when it involves multiple criminals or dangerous scenarios.
+He/she would then need backup to take handle the scenario.</p>
+</li>
+<li>
+<p>	Highlights: HQP can view the requests with most urgent based on case.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Dispatch Command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows HQP to dispatch backup according to the dispatchers’ requests.
+HQP can dispatch other ‘free’ POs to help the POs who requested for backup. PO who requested backup is then given a return message with ETA &amp; Google Maps URL to pinpoint the location of the backup personnel.
+For PO who is being dispatched, he also given an ETA &amp; Google Maps URL to pinpoint the requester.</p>
+</li>
+<li>
+<p>Justification: After POs request backup, HQP should be able to dispatch backup to help them in their case.
+Hence, location of the requester and backup officer along with ETA are crucial.
+Location is important, so backup officer knows where to travel to &amp; ETA is crucial so that the requester knows how much time he/she needs to hold off the suspects on his own before backup arrives.</p>
+</li>
+<li>
+<p>Highlights: ETA is real time with Google Maps Distance API. Location is displayed in a Google Maps URL to allow PO to navigate.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancements</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Able to delete a person from a record without listing beforehand</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>:
+[<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] _{give links to collated code files}</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Guided team for proper coding standards and practices.</p>
+</li>
+<li>
+<p>Refactored teammates code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed (with non-trivial review comments):
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/160">#160</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/140">#140</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/94">#94</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/93">#93</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/66">#66</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/44">#44</a>,
+<a href="https://github.com/CS2113-AY1819S1-F10-3/main/pull/25">#25</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated a third-party REST API (Google Maps API) to the project.</p>
+</li>
+<li>
+<p>Integrated a third-party library (HttpClient Apache) to the project as a Http Client to communicate with Google Maps REST API.</p>
+</li>
+<li>
+<p>Integrated a third-party library (Commons IO) to convert buffer data into String.</p>
+</li>
+<li>
+<p>Integrated a third-party library (JSON Org) to parse Google Maps API data.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For the <a href="https://github.com/CS2113-AY1819S1-F10-3/main/blob/master/docs/UserGuide.adoc">User Guide</a>, I added the content that were relevant for me which included Edit Command, Request Command &amp; Dispatch Command.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the"><a class="link" href="#contributions-to-the">Contributions to the</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For the <a href="https://github.com/CS2113-AY1819S1-F10-3/main/blob/master/docs/DeveloperGuide.adoc">Developer Guide</a>, I added the commands that were relevant for me which included Edit Command, Request Command &amp; Dispatch Command.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-29 15:51:06 UTC</div></div></div></body></html>
